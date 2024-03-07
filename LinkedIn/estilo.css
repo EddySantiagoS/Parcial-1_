@@ -1,0 +1,583 @@
+﻿body, html{
+  width: 100%;
+  max-width: 100%;
+  background-color: #F4F2EE;
+}
+body, h1, h2, h3, h4, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between; /* Ajustado para distribuir espacio */
+  padding: 6px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.navbar img {
+    height: 40px; /* Ajusta esto al tamaño de tu logo */
+    margin-right: 10px;
+}
+
+#log {
+    margin-left: -30%;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;  
+  margin-right: 10%;
+}
+
+.navbar li {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.navbar li img {
+    height: 20px; /* Ajusta esto al tamaño de tus íconos */
+    margin-bottom: 2px;
+}
+
+.navbar li span {
+    display: block;
+    font-size: 12px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    align-items: center;
+
+}
+
+.navbar a img {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+.navbar li.divisoria::after {
+  content: ''; /* necesario para que el pseudo-elemento se muestre */
+  display: block;
+  height: 50px; /* o el alto deseado de la línea */
+  width: 1px; /* el ancho de la línea */
+  background-color: #3a3a3a; /* el color de la línea, gris en este caso */
+  position: absolute;
+  right: -20px; /* ajusta para mover la línea entre 'Yo' y 'Para negocios' */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #eef3f8;
+  border-radius: 5px;
+  width: 250px;
+  background-color: #eef3f8;
+  text-indent: 25px;
+}
+
+.icobar {
+  display: flex; 
+  align-items: center; 
+  margin-left: 15%;
+}
+
+.img-bar {
+    position: absolute; 
+    right: 86%; 
+    top: 60%; 
+    transform: translateY(-50%); 
+
+}
+
+.img-bar img {
+    height: 16px; 
+    width: auto; 
+}
+
+.navbar ul li:nth-child(6) {    
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Cambia la disposición a columna en pantallas pequeñas */
+  }
+  
+  .navbar img.logo, .navbar .icon {
+    width: auto; /* Ajusta el ancho a auto para que los elementos no se estiren o encogen */
+  }
+  
+  .search-bar {
+    order: -1; /* Asegura que la barra de búsqueda vaya al principio */
+    margin-bottom: 10px; /* Añade espacio debajo de la barra de búsqueda */
+  }
+}
+
+
+/* Estilos del contenido principal */
+main {
+  margin-top: 6%;
+  margin-right: 7%;
+  margin-left: 7%;
+  display: flex;
+  margin-bottom: 20px; /* Evitar que el pie de página cubra el contenido cuando se expande */
+}
+
+aside.lateral {
+  flex: 1; /* Los asides tomarán 1/3 del espacio disponible */
+  margin: 0 10px; /* Margen entre las secciones laterales y el contenido principal */
+  width: 80%;
+  margin-right: 10px;
+}
+
+.profile-image,
+.suggestion-image {
+  width: 100%; /* O un tamaño específico, pero manteniendo el aspecto */
+  border-radius: 50%; /* Para hacerlas circulares como en LinkedIn */
+  margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.suggestion-item {
+  background-color: #f3f7f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px; /* Agregar bordes redondeados si es necesario */
+}
+
+/* Estilos de la sección de bienvenida y la red */
+#welcome-section {
+    width: 85%;
+    background-color: #f4f4f5; /* Ajustar el color de fondo para que coincida con la segunda imagen */
+    border: none; /* Parece que no hay borde en la segunda imagen */
+    padding: 20px;
+    border-radius: 10px; /* Bordes más redondeados según la segunda imagen */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra más notoria según la segunda imagen */
+    align-items: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente similar a la segunda imagen */
+}   
+
+#welcome-section img {
+  width: 60px; /* Ajuste el tamaño de la imagen según sea necesario */
+  border-radius: 50%;
+  margin-bottom: 15px; /* Aumentar el margen inferior */
+}
+
+#welcome-section h5 {
+  color: #333; /* Texto más oscuro para el nombre */
+  margin-bottom: 15px; /* Aumentar el margen inferior */
+}
+
+.network-link, .try-premium-link, .bookmark-link {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #666;
+  text-align: left;
+  font-size: 12px;
+}
+
+.add-photo-link {
+    font-size: 12px;
+    display: block;
+    color: #0a66c2; /* Color de enlace más estándar */  
+}
+
+.network-actions {
+    text-align: left;
+}
+
+.network-actions span {
+    font-size: 12px;
+    color: #666; /* Color de texto más claro para 'Amplía tu red' */
+}
+
+.premium-info, .bookmark-section, .network-actions {
+  border-top: 1px solid #ddd; /* Línea divisoria como en la segunda imagen */
+  padding-top: 10px; /* Espacio por encima de la línea */
+  margin-top: 10px; /* Espacio por encima de la línea */
+}
+
+.additional-info {
+  background-color: #ffffff; /* Fondo blanco */
+  border: none; /* No parece haber bordes en el cuadro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra suave */
+  padding: 20px; /* Espaciado interior */
+  margin-top: 8px; /* Espaciado entre este cuadro y el anterior */
+  width: 85%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente */
+}
+
+.info-section:first-child {
+  margin-top: -25px; /* Remueve cualquier margen superior del primer elemento de la sección */
+  padding-top: 0px; /* Reduce el espaciado en la parte superior si es necesario */
+}
+
+.info-section h6 {
+  color: #0a66c2; /* Color de enlace más estándar */ 
+  margin-bottom: 10px; /* Espaciado debajo de los títulos */
+}
+
+.see-more-link {
+  display: block;
+  color: #666;
+  text-align: center; /* Centrar el enlace "Ver más" */
+  font-weight: bold;
+  margin-top: 10px; /* Espaciado encima del enlace "Ver más" */
+  border-top: 1px solid #ddd; /* Línea divisoria */
+  margin-top: 10px; /* Espaciado después de la línea divisoria */
+}
+
+#feed-addition {
+  background-color: #ffffff; /* Fondo blanco para la sección de sugerencias */
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#feed-addition button {
+  background-color: #0073b1;   
+}
+
+#main-content {
+  width: 60%;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.popup {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-banner {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-bottom: 5%;
+}
+
+.profile-pic {
+  width: 200px; 
+  height: auto; 
+  object-fit: cover;
+  margin-bottom: 10px; 
+}
+
+.text-container h2 {
+  color: #333;
+  margin: 0;
+  line-height: 1.4;  
+}
+
+.text-container p {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Controla el espacio entre botones */
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 16px;
+  border: 2px solid #0A66C2; /* Set border to blue */
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  background-color: transparent; 
+  color: #084482; 
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #EDEEF0; 
+  color: #084482; 
+}
+
+.option-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 2px solid #0A66C2;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #0A66C2;
+  font-weight: bold;
+}
+
+.option-button img {
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+  margin-right: 8px;
+}
+
+.sort-container {
+  display: flex;
+  align-items: center;
+}
+
+.sort-container label {
+  margin-right: 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+.sort-container select {
+  padding: 8px;
+  border-radius: 20px;
+  border: 2px solid #0A66C2;
+  color: #0A66C2;
+  background-color: #ffffff;
+}
+
+.main-section {
+  background-color: #EDEEF0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Ajuste para organizar los elementos en columna */
+}
+
+.search-container {
+  margin-bottom: 10px; /* Añade margen debajo del cuadro de búsqueda */
+}
+
+.search-container input {
+  width: 80%;
+  padding: 8px 16px;
+  border: 2px solid #0A66C2;
+  border-radius: 20px;
+  color: #333;
+  margin-left: 8%;;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: row; /* Ajuste para organizar los botones en fila */
+  justify-content: center;
+  gap: 10px; /* Ajustar según sea necesario */
+}
+
+.option-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 2px solid #0A66C2;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #0A66C2;
+  font-weight: bold;
+}
+
+.option-button img {
+  width: 24px; /* Ajustar tamaño según sea necesario */
+  height: 24px; /* Ajustar tamaño según sea necesario */
+  margin-right: 8px;
+}
+
+.sort-container-external {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.sort-container-external label {
+  margin-right: 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+.sort-container-external select {
+  padding: 8px;
+  border-radius: 20px;
+  border: 2px solid #0A66C2;
+  color: #333;
+  background-color: #ffffff;
+}
+
+#feed-addition {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#feed-addition h3 {
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ececec; /* Separación entre sugerencias */
+}
+
+.suggestion-image {
+  width: 50px; /* Ajusta el tamaño de la imagen */
+  height: 50px; /* Ajusta el tamaño de la imagen */
+  border-radius: 50%; /* Imagen redonda */
+  margin-right: 10px;
+  border: 2px solid #ececec; /* Borde de la imagen */
+}
+
+.suggestion-content {
+  flex-grow: 1; /* El contenido crece para ocupar el espacio disponible */
+}
+
+.suggestion-content h4 {
+  color: #0073b1; /* Color azul para el nombre */
+  margin: 0;
+}
+
+.suggestion-content p {
+  color: #666; /* Color gris para la descripción */
+  margin: 0;
+}
+
+.follow-button {
+  background-color: #0073b1;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 20px; /* Botones con bordes redondeados */
+  text-align: center;
+}
+
+/* Estilo para el último elemento de sugerencia sin borde inferior */
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+#social-post {
+  background-color: #f9f9f9; /* Color de fondo para la sección */
+  padding: 20px;
+  margin-top: 20px; /* Espacio entre las secciones */
+}
+
+.social-post-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-and-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Espacio entre la imagen de perfil y el título */
+}
+
+.profile-image {
+  width: 50px; /* Tamaño de la imagen de perfil */
+  height: 50px;
+  border-radius: 50%; /* Para que la imagen de perfil sea circular */
+  margin-right: 10px; /* Espacio entre la imagen de perfil y el título */
+}
+
+.post-image {
+  max-width: 100%; /* Asegura que la imagen se ajuste al ancho de su contenedor */
+  margin-top: 10px; /* Espacio entre la descripción y la imagen grande */
+}
+
+#footer-section {
+  background-color: #f3f2ef; /* Color de fondo para la sección */
+  padding: 20px;
+  text-align: center; /* Centrar el contenido */
+  position: fixed;
+  width: 15%;
+}
+
+.footer-content h4 {
+  font-size: 24px; /* Tamaño de la fuente para el título */
+  color: #0a0a0a; /* Color del texto */
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.footer-image {
+  max-width: 100%; /* Asegura que la imagen no sobrepase el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrar los enlaces */
+  gap: 10px; /* Espacio entre los enlaces */
+  margin-bottom: 20px; /* Espacio debajo de los enlaces */
+}
+
+.footer-links a {
+  color: #0073b1; /* Color de los enlaces */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 14px; /* Tamaño de la fuente de los enlaces */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón por encima */
+}
+
+.footer-company {
+  color: #0a0a0a; /* Color del texto */
+  font-size: 14px; /* Tamaño de la fuente */
+}
+
+/* Estilos del pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;  /* Esta línea asegura que el pie de página se quede al fondo */
+  left: 0;    /* Alinea el pie de página al lado izquierdo de la pantalla */
+  width: 100%;
+  z-index: 100; /* Asegura que el footer se mantenga sobre otros elementos */
+}
+
+/* Agregar media queries si es necesario para ajustar la responsividad */
+@media (max-width: 768px) {
+  .lateral, #main-content {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
