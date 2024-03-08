@@ -135,7 +135,7 @@ body, h1, h2, h3, h4, p, ul, li, a {
 
 /* Estilos del contenido principal */
 main {
-  margin-top: 6%;
+  margin-top: 5%;
   margin-right: 7%;
   margin-left: 7%;
   display: flex;
@@ -151,7 +151,8 @@ aside.lateral {
 
 .profile-image,
 .suggestion-image {
-  width: 100%; /* O un tamaño específico, pero manteniendo el aspecto */
+  width: 100%; 
+  height: auto;
   border-radius: 50%; /* Para hacerlas circulares como en LinkedIn */
   margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
@@ -178,6 +179,7 @@ aside.lateral {
 
 #welcome-section img {
   width: 60px; /* Ajuste el tamaño de la imagen según sea necesario */
+  height: auto;
   border-radius: 50%;
   margin-bottom: 15px; /* Aumentar el margen inferior */
 }
@@ -309,7 +311,7 @@ aside.lateral {
 
 .btn-primary, .btn-secondary {
   padding: 10px 16px;
-  border: 2px solid #0A66C2; /* Set border to blue */
+  border: 2px solid #0A66C2; 
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
@@ -337,8 +339,8 @@ aside.lateral {
 }
 
 .option-button img {
-  width: 24px; /* Adjust size as needed */
-  height: 24px; /* Adjust size as needed */
+  width: 24px; 
+  height: 24px; 
   margin-right: 8px;
 }
 
@@ -504,7 +506,7 @@ aside.lateral {
 
 .profile-image {
   width: 50px; /* Tamaño de la imagen de perfil */
-  height: 50px;
+  height: auto;
   border-radius: 50%; /* Para que la imagen de perfil sea circular */
   margin-right: 10px; /* Espacio entre la imagen de perfil y el título */
 }
